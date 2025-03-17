@@ -32,9 +32,119 @@ body{
   font-size: 56px;
   font-weight: 700;
   margin-bottom: 12px;
+  animation: glitch 2s ;
 }
 #main .header p{
   font-size: 22px;
   font-weight: 400;
   margin-bottom: 113px;
+}
+
+#main .pass-left .img-strong{
+  position: relative;
+  display: inline-block;
+}
+#main .pass-left .img-strong .flower-left, .flower-right, .icon{
+  position: absolute;
+}
+#main .pass-left .img-strong .flower-left{
+  left: -25px;
+  bottom: 5px;
+  z-index: -1;
+  animation: wave 3s infinite ease-in-out;
+}
+#main .pass-left .img-strong .flower-right{
+  right: -25px;
+  bottom: 5px;
+  z-index: -1;
+  animation: wave 3s infinite ease-in-out;
+}
+#main .pass-left .img-strong .icon{
+  top: 37%;
+  left: 45%;
+  animation: float 2s infinite ease-in-out;
+}
+#main .pass-left .img-medium{
+  position: relative;
+  display: inline-block;
+}
+#main .pass-left .img-medium .flower-left, .flower-right, .icon{
+  position: absolute;
+}
+#main .pass-left .img-medium .flower-left{
+  left: -10px;
+  bottom: 34px;
+  animation: wave 3s infinite ease-in-out;
+}
+#main .pass-left .img-medium .flower-right{
+  right: -10px;
+  bottom: 34px;
+  animation: wave 3s infinite ease-in-out;
+}
+#main .pass-left .img-medium .icon{
+  top: 10%;
+  right: 10%;
+  animation: float 2s infinite ease-in-out;
+}
+#main .pass-left .img-weak{
+  position: relative;
+  display: inline-block;
+}
+#main .pass-left .img-weak .flower-left, .flower-right, .icon{
+  position: absolute;
+}
+#main .pass-left .img-weak .flower-left{
+  left: 0;
+  bottom: 5px;
+  animation: wave 3s infinite ease-in-out;
+}
+#main .pass-left .img-weak .flower-right{
+  right: 0;
+  bottom: 5px;
+  animation: wave 3s infinite ease-in-out;
+}
+#main .pass-left .img-weak .icon{
+  top: 30%;
+  left: 10%;
+  animation: float 2s infinite ease-in-out;
+}
+
+
+
+
+@keyframes float {
+  0%{
+      transform: translateY(0);
+  }
+  50%{
+      transform: translateY(-10px);
+  }
+  100%{
+      transform: translateY(0px);
+  }
+  
+}
+@keyframes wave {
+  0%{
+      transform: translateX(0);
+  }
+  50%{
+      transform: translateX(-10px);
+  }
+  100%{
+      transform: translateX(0px);
+  }
+  
+}
+
+
+@keyframes glitch {
+  50% {
+    filter: blur(10px);
+    transform: skew(20deg);
+  }
+  100% {
+    filter: blur(0px);
+    transform: skew(0deg);
+  }
 }
