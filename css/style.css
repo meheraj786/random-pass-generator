@@ -159,7 +159,7 @@ body{
   align-items: center;
 }
 #main .main-wrapper .pass-right .character label{
-  margin-right: 20px;
+  margin-right: 40px;
   margin-left: 10px;
   font-size: 22px;
 }
@@ -188,10 +188,14 @@ border-radius: 100%;
 padding: 5px;
 border: 1px solid var(--text);
 background: transparent;
+cursor: pointer;
 }
 #main .main-wrapper .pass-right .length .increment{
 border-radius: 100%;
 padding: 5px;
+border: 1px solid var(--text);
+background: transparent;
+cursor: pointer;
 }
 
 #main .main-wrapper .pass-right .length .length-number{
