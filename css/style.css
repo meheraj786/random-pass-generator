@@ -170,6 +170,61 @@ body{
 #main .main-wrapper .pass-right .character h3{
   margin-right: 50px;
 }
+#main .main-wrapper .pass-right .top button{
+  padding: 9px 29px;
+  background: transparent;
+  border: 1px solid var(--text);
+  border-radius: 30px;
+  cursor: pointer;
+}
+#main .main-wrapper .pass-right .top button svg:hover{
+  animation: float 1s ease-in-out;
+}
+#main .main-wrapper .pass-right .top button svg{
+  color: var(--medium);
+}
+#main .main-wrapper .pass-right .length .decrement{
+border-radius: 100%;
+padding: 5px;
+border: 1px solid var(--text);
+background: transparent;
+}
+#main .main-wrapper .pass-right .length .increment{
+border-radius: 100%;
+padding: 5px;
+}
+
+#main .main-wrapper .pass-right .length .length-number{
+  padding: 11px 34px ;
+  border: 1px solid var(--medium);
+  border-radius: 30px;
+  font-size: 22px;
+}
+.slider {
+  -webkit-appearance: none;
+  width: 30%;
+  height: 15px;
+  background: #d3d3d3;
+  outline: none;
+  border-radius: 30px;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background: var(--medium);
+  cursor: pointer;
+}
 
 
 
