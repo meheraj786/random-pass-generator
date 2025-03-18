@@ -175,6 +175,11 @@ function generateRandomPassword(length) {
     const randomIndex = Math.floor(Math.random() * allChars.length);
     password += allChars[randomIndex];
   }
+  //   for (let i = 0; i < length; i++) {
+//     const randomIndex = Math.round(Math.random() * allChars.length - 1);
+//   password += allChars[randomIndex];
+//   randomPass.innerHTML=password
+//   }
 
   randomPass.textContent = password;
   lengthNumber.textContent = length;
