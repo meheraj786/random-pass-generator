@@ -7,8 +7,10 @@ const specialChar = document.querySelector("#specialChar")
 const increment = document.querySelector(".increment")
 const decrement = document.querySelector(".decrement")
 const randomPass = document.querySelector(".password")
+const comment = document.querySelector(".comment")
 
 let inputValue = parseInt(range.value);
+
 
 
 const upperCase= "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -22,8 +24,14 @@ const char= "@#$%&*{}!<>"
 range.addEventListener("input", function() {
   const inputValue= parseInt(this.value)
   lengthNumber.innerHTML= inputValue;
-  console.log(typeof lengthNumber.innerHTML);
   generateRandomPassword(inputValue) 
+  if (inputValue>=4 && inputValue<=9) {
+    comment.innerHTML="weak";
+  }else if(inputValue>=10 && inputValue<=14){
+    comment.innerHTML="medium"
+  }else if(inputValue>=15 && inputValue<=20){
+    comment.innerHTML="strong"
+  }
   return inputValue
 });
 ABC.addEventListener("input", function() {
@@ -63,6 +71,8 @@ decrement.addEventListener("click", function() {
 
 
 
+
+
 function generateRandomPassword(length) {
   let allChars = '';
   
@@ -82,7 +92,7 @@ function generateRandomPassword(length) {
 if (ABC.checked || abc.checked || num123.checked || specialChar.checked) {
     let password = '';
   for (let i = 0; i < length; i++) {
-    const randomIndex = Math.floor(Math.random() * allChars.length);
+    const randomIndex = Math.round(Math.random() * allChars.length);
     password += allChars[randomIndex];
     
   randomPass.innerHTML=password
@@ -91,7 +101,6 @@ if (ABC.checked || abc.checked || num123.checked || specialChar.checked) {
   randomPass.innerHTML=("Check any character")
 }
 
-return password
 }
 
 generateRandomPassword(inputValue) 
