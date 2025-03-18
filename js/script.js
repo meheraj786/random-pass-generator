@@ -147,16 +147,16 @@ const abc= document.querySelector("#abc")
 const num123= document.querySelector("#numbers")
 const specialCharecter = document.querySelector("#specialChar")
 
-// Character sets for password generation
+
 const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowerCase = "abcdefghijklmnopqrstuvwxyz";
 const number = "1234567890";
 const specialChar = "@#$%&*{}!<>";
 
-// Initial password length from slider
+
 let inputValue = parseInt(range.value);
 
-// Function to generate a random password
+
 function generateRandomPassword(length) {
   let allChars = '';
 
@@ -181,13 +181,13 @@ function generateRandomPassword(length) {
   updatePasswordStrength(password.length);
 }
 
-// Update the displayed password length
+
 range.addEventListener("input", function () {
   inputValue = parseInt(this.value);
   generateRandomPassword(inputValue);
 });
 
-// character change 
+
 ABC.addEventListener("input", function() {
     generateRandomPassword(inputValue) 
     
@@ -202,7 +202,7 @@ ABC.addEventListener("input", function() {
     generateRandomPassword(inputValue) 
   });
 
-// Increment button
+
 increment.addEventListener("click", function () {
   if (inputValue < 20) {
     inputValue++;
@@ -212,7 +212,7 @@ increment.addEventListener("click", function () {
   }
 });
 
-// Decrement button
+
 decrement.addEventListener("click", function () {
   if (inputValue > 4) {
     inputValue--;
@@ -222,13 +222,13 @@ decrement.addEventListener("click", function () {
   }
 });
 
-// Copy button
+
 document.querySelector(".copy").addEventListener("click", function () {
   navigator.clipboard.writeText(randomPass.textContent);
   alert("Password copied to clipboard!");
 });
 
-// Function to update password strength
+
 function updatePasswordStrength(passwordLength) {
   const comment = document.querySelector(".comment");
   const imgWeak = document.querySelector(".img-weak");
@@ -263,5 +263,5 @@ function updatePasswordStrength(passwordLength) {
   }
 }
 
-// Initial password generation
+
 generateRandomPassword(inputValue);

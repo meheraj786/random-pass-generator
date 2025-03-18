@@ -19,11 +19,12 @@ body{
   --medium: #3498DB;
   --weak: #F39C12;
   --text: #2C3E50;
-  --shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.26);
+  --shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.26);
 }
 
 #main{
-  padding: 181px 0;
+  padding: 150px 0;
+  height: 390px;
 }
 #main .header{
   text-align: center;
@@ -32,17 +33,22 @@ body{
   font-size: 56px;
   font-weight: 700;
   margin-bottom: 12px;
-  animation: glitch 2s ;
+  animation: glitch 1s ;
 }
 #main .header p{
   font-size: 22px;
   font-weight: 400;
   margin-bottom: 113px;
 }
+#main .pass-left{
+  height: 390px;
+  width: 35%;
+}
 
 #main .pass-left .img-strong{
   position: relative;
   display: none;
+  margin-top: 50px;
 }
 #main .pass-left .img-strong .flower-left, .flower-right, .icon{
   position: absolute;
@@ -115,13 +121,15 @@ body{
   justify-content: space-around;
   align-items: center;
 }
-#main .main-wrapper .pass-right .top{
+#main .main-wrapper  .top{
   display: flex;
   align-items: center;
   margin-bottom: 68px;
 }
-#main .main-wrapper .pass-right .top .pass-result{
+#main .main-wrapper .pass-result{
   width: 488px;
+  box-shadow: var(--shadow);
+  font-size: 20px;
   border: 1px solid var(--text);
   height: 55px;
   border-radius: 30px;
@@ -131,7 +139,7 @@ body{
   align-items: center;
   margin-right: 15px;
 }
-#main .main-wrapper .pass-right .top .pass-result .comment{
+#main .main-wrapper .pass-result .comment{
   position: absolute;
   width: 118px;
   height: 33px;
@@ -147,50 +155,50 @@ body{
   transform: translateY(-50%);
 
 }
-#main .main-wrapper .pass-right .length{
+#main .main-wrapper  .length{
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 55px;
 
 }
-#main .main-wrapper .pass-right .character{
+#main .main-wrapper  .character{
   display: flex;
   align-items: center;
 }
-#main .main-wrapper .pass-right .character label{
+#main .main-wrapper  .character label{
   margin-right: 40px;
   margin-left: 10px;
   font-size: 22px;
 }
-#main .main-wrapper .pass-right .character input{
+#main .main-wrapper  .character input{
   width: 24px;
   height: 24px;
 }
-#main .main-wrapper .pass-right .character h3{
+#main .main-wrapper  .character h3{
   margin-right: 50px;
 }
-#main .main-wrapper .pass-right .top button{
+#main .main-wrapper button{
   padding: 9px 29px;
   background: transparent;
   border: 1px solid var(--text);
   border-radius: 30px;
   cursor: pointer;
 }
-#main .main-wrapper .pass-right .top button svg:hover{
-  animation: float 1s ease-in-out;
+#main .main-wrapper  .top button:hover{
+  box-shadow: var(--shadow);
 }
-#main .main-wrapper .pass-right .top button svg{
+#main .main-wrapper  .top button svg{
   color: var(--medium);
 }
-#main .main-wrapper .pass-right .length .decrement{
+#main .main-wrapper  .length .decrement{
 border-radius: 100%;
 padding: 5px;
 border: 1px solid var(--text);
 background: transparent;
 cursor: pointer;
 }
-#main .main-wrapper .pass-right .length .increment{
+#main .main-wrapper  .length .increment{
 border-radius: 100%;
 padding: 5px;
 border: 1px solid var(--text);
@@ -198,7 +206,7 @@ background: transparent;
 cursor: pointer;
 }
 
-#main .main-wrapper .pass-right .length .length-number{
+#main .main-wrapper  .length .length-number{
   padding: 11px 34px ;
   border: 1px solid var(--medium);
   border-radius: 30px;
@@ -226,7 +234,7 @@ cursor: pointer;
   width: 30px;
   height: 30px;
   border-radius: 100%;
-  background: var(--medium);
+  background: var(--text);
   cursor: pointer;
 }
 
